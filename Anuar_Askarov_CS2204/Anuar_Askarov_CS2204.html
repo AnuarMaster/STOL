@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Event Registration</h1>
+    </header>
+
+    <main>
+        <form id="registration-form" action="/register" method="POST">
+            <div class="form-center">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" pattern="\+7[0-9]{9}" placeholder="+7(   )"><br><br>
+            <label for="events">Select Event:</label>
+            <select id="events" name="events" required>
+                <option value="" disabled selected>Select an event</option>
+                <option value="event_1">FC Astana match</option>
+                <option value="event_2">Kairat Nurtas concert</option>
+                <option value="event_3">John Wick movie</option>
+            </select>
+
+            <button type="submit">Register</button>
+        </div>
+        </form>
+    </main>
+</body>
+</html>
